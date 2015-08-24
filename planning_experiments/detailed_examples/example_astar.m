@@ -2,7 +2,7 @@ clc;
 clear;
 close all;
 
-load ../../saved_environments/baffle_env.mat
+load ../../saved_environments/env02.mat
 bbox = [-1 -1; 1 1];
 start = [0 0];
 goal = [1 0];
@@ -17,13 +17,13 @@ options.c = @(v1, v2) cost_fn_map_coll_traj(v1.state, v2.state, map, inf);
 
 %% Setup heuristic
 options.g_hat = @(v) pdist2(cell2mat({v.state}'), start);
-options.h_hat = @(v) pdist2(cell2mat({v.state}'), goal);
+options.h_hat = @(v) 10*pdist2(cell2mat({v.state}'), goal);
 options.c_hat = @(v1, v2) norm(v1.state - v2.state);
 
 %% Setup Implicit Graph
 resolution = 40;
 options.sampler = @(g_t) sampling_lattice2D_static(g_t, resolution, start, goal, bbox);
-options.succ_func = @(query, V, S, total_size) succ_func_lattice2D_8conn_static( query, V, S, total_size, resolution, bbox);
+options.succ_func = @(query, V, S, total_size) succ_func_lattice2D_4conn_static( query, V, S, total_size, resolution, bbox);
 
 
 %% Set stopping conditions

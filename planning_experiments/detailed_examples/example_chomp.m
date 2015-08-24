@@ -2,7 +2,7 @@ clc;
 clear;
 close all;
 
-load ../../saved_environments/baffle_env.mat
+load ../../saved_environments/env03.mat
 bbox = [-1 -1; 1 1];
 start = [0 0];
 goal = [1 0];
@@ -28,7 +28,7 @@ c_final = @(xi, xi_der) lambda*f_smooth(xi) + w_obs*c_scalar_obs_fn(xi);
 grad_final = @(xi, xi_der) lambda*grad_smooth(xi) + w_obs*grad_fobs(xi);
 
 %% Set optimization options
-options.eta = 2000;
+options.eta = 4000;
 options.max_iter = 100;
 options.min_iter = 10;
 options.min_cost_improv_frac = 1e-5;

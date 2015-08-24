@@ -2,7 +2,7 @@ clc;
 clear;
 close all;
 
-load ../../saved_environments/baffle_env.mat
+load ../../saved_environments/env_hard.mat
 bbox = [-1 -1; 1 1];
 start = [0 0];
 goal = [1 0];
