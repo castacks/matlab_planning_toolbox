@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function handle_set = global_search_visualize(handle_set, S, V, Xsamp, goal_id, edge_being_cons)
 %BITSTAR_VISUALIZE Summary of this function goes here
 %   Detailed explanation goes here

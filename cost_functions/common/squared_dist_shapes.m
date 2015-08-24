@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function [c] = squared_dist_shapes( pt, shapes_array, epsilon )
 %SQUARED_DIST_SHAPES Summary of this function goes here
 %   Detailed explanation goes here

@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function draw_cuboid_set( cuboid_set )
 %DRAW_CUBOID_SET Summary of this function goes here
 %   Detailed explanation goes here

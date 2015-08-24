@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 %% This is an example created by Sanjiban for testing purposes. 
 % This is for ICRA '15 results, so dont touch till then.
 

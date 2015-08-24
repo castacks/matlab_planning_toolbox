@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function [CuboidHandle, verts, facs] = DrawCuboid(varargin)
 % Draw Cuboid
 % Draw a Cuboid using 8 rectangular faces. Places Cuboid Into Current Figure

@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function h = errbar(x,y,varargin)
 % errbar  plots vertical or horizontal errorbars. Error bars may be
 % symmetic or asymmetric about their data points. 

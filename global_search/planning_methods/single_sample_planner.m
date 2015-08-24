@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function [final_cost, final_path, log_data] = single_sample_planner( start, goal, options )
 %BITSTAR Summary of this function goes here
 %   Detailed explanation goes here

@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function [ cost_traversal, time_taken, cost_history, traj_history ] = covariant_gradient_descent( xi, cost_fn, grad_fn, options )
 %COVARIANT_GRADIENT_DESCENT Summary of this function goes here
 %   Detailed explanation goes here

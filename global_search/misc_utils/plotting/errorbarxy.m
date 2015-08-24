@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function [varargout]=errorbarxy(varargin)
 %   ERRORBARXY is a function to generate errorbars on both x and y axes 
 %   with specified errors modified from codes written by Nils Sjöberg 
