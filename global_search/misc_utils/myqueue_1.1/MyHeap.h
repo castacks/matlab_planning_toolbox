@@ -158,7 +158,7 @@ public:
 	
 	/// check recursively if the substructures is correct using STL provided algorithm
 	bool verifyHeap(  ){
-		return std::is_heap(heap.begin(), heap.end() );
+		return is_heap(heap.begin(), heap.end() );
 	}
 	
 private:
