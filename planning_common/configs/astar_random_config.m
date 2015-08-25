@@ -10,9 +10,7 @@ options.c = @(v1, v2) cost_fn_map_coll_traj(v1.state, v2.state, map, inf);
 
 %% Setup heuristic
 heuristic_inflation = 3;
-options.g_hat = @(v) pdist2(cell2mat({v.state}'), start);
 options.h_hat = @(v) heuristic_inflation*pdist2(cell2mat({v.state}'), goal);
-options.c_hat = @(v1, v2) norm(v1.state - v2.state);
 
 %% Setup Implicit Graph
 samples_per_batch = 1000;
