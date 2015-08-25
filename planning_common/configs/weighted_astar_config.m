@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function planner = weighted_astar_config( start, goal, map, cost_map, bbox, plan_time, visualize)
 %WEIGHTED_ASTAR_CONFIG Summary of this function goes here
 %   Detailed explanation goes here

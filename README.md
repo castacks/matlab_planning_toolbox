@@ -1,6 +1,6 @@
 # README #
 
-This is a matlab toolbox for understanding different global and local search algorithms. This page is still under construction
+This is a matlab toolbox for understanding different global and local search algorithms. Please see [wiki](https://bitbucket.org/castacks/matlab_planning_toolbox/wiki/Home).
 
 ### Installation ###
 Run the script init_setup.m in the main folder. This will add concerned folders to path and mex dependencies.

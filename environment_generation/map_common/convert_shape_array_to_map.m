@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function map = convert_shape_array_to_map( shapes_array, bbox, resolution )
 %CONVERT_SHAPE_ARRAY_TO_MAP Summary of this function goes here
 %   Detailed explanation goes here
