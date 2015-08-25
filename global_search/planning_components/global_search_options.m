@@ -17,7 +17,7 @@ options.max_time = inf;
 %Visualization and Logging
 options.visualize = 1;
 options.visualize_delay = 0.01;
-options.should_log = 1;
+options.should_log = 0;
 
 %Functions
 options.g_hat = @(v) pdist2(cell2mat({v.state}'), start);
