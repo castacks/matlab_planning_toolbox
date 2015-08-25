@@ -9,18 +9,20 @@ clc;
 clear;
 close all;
 
-load ../../saved_environments/env03.mat
+%% Load environment, start goal and bounding bx
+load ../../saved_environments/env_baffle.mat
 bbox = [-1 -1; 1 1];
 start = [0 0];
 goal = [1 0];
 
+%% Create cost function derivatives used by CHOMP
 [ cost_map_x, cost_map_y] = get_cost_map_derivatives( cost_map );
 
 %% Create Initial Guess
 n = 100; %How many waypoints
 xi = [linspace(start(1),goal(1),n)' linspace(start(2),goal(2),n)'];
 
-%% Create Cost Function
+%% Create surrogate cost function used by CHOMP
 w_obs = 100;
 lambda = 1;
 
@@ -36,19 +38,36 @@ grad_final = @(xi, xi_der) lambda*grad_smooth(xi) + w_obs*grad_fobs(xi);
 
 %% Set optimization options
 options.eta = 4000;
-options.max_iter = 100;
-options.min_iter = 10;
 options.min_cost_improv_frac = 1e-5;
 options.M = A;
 options.decrease_wt = 1;
 options.progress = 0;
 
-%% Do CHOMP
-[ cost_traversal, time_taken, cost_history, traj_history] = covariant_gradient_descent( xi, c_final, grad_final, options );
+%% Set stopping conditions
+options.max_iter = 100;
+options.min_iter = 10;
+options.min_cost_improv_frac = 1e-5;
+options.max_time = 10.0;
+
+%% Visualize
+options.visualize = 1;
 
 %% Setup visualizations
 figure;
 axis(reshape(bbox, 1, []));
 hold on;
 visualize_map(map);
-plot_traj_history(traj_history);
+
+%% Do CHOMP
+[final_path] = covariant_gradient_descent( xi, c_final, grad_final, options );
+
+%% Check path
+found_path = ~isempty(final_path);
+fprintf('Found path: %d \n', found_path);
+if (found_path)
+    in_collision = cost_fn_map_coll_dense(final_path, map);
+    fprintf('Is solution in collision: %d \n', in_collision);
+    if (~in_collision)
+        fprintf('Length of solution: %f\n', traj_length(final_path));
+    end
+end

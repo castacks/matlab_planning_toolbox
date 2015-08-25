@@ -33,8 +33,14 @@ xi_der = n*diff([p_start; xi]);
 traj.grad = grad_fn(xi, xi_der);
 traj_history = [traj_history; traj];
 cost_history = [cost_history; cost_fn(xi, xi_der)];
+timerval = tic;
 
 for i = 1:max_iter
+    
+    if (toc(timerval) >= options.max_time)
+        break;
+    end
+    
     grad = traj.grad;
     if (options.decrease_wt == 1)
         step_size = (1/eta)*(1/sqrt(i + options.progress));
@@ -67,8 +73,8 @@ if (options.visualize)
     plot_traj_history(traj_history);
 end
 
-final_path = traj_history(end);
-
+final_path = traj_history(end).x';
+chomp_cost = cost_history(end);
 
 % if (nargout > 4)
 %     figure(1);

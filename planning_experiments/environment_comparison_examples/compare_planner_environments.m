@@ -13,7 +13,7 @@ close all;
 env_names = {'env01', 'env02', 'env03'};
 
 %% Make a list of planner configurations
-planner_config_names = {'rrtstar_config'};
+planner_config_names = {'chomp_config', 'rrtstar_config', 'weighted_astar_config'};
 
 %% Set experiment configurations
 visualize = 1; %do we want to visualize?
