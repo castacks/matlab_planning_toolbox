@@ -58,5 +58,9 @@ for env_idx = 1:length(env_names)
                 fprintf('Length of solution: %f\n', traj_length(final_path));
             end
         end
+        if (visualize)
+            fprintf('Paused. Press enter to continue\n');
+            pause;
+        end
     end
 end
