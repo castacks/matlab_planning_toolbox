@@ -1,8 +1,15 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 clc;
 clear;
 close all;
 
-load ../../saved_environments/env02.mat
+load ../../saved_environments/baffle_env.mat
 bbox = [-1 -1; 1 1];
 start = [0 0];
 goal = [1 0];
@@ -41,4 +48,11 @@ hold on;
 visualize_map(map);
 
 %% Call BIT*
-[final_cost, final_path, log_data] = batch_sample_planner( start, goal, options );
+[final_path] = batch_sample_planner( start, goal, options );
+
+%% Check path
+in_collision = cost_fn_map_coll_dense(final_path, map);
+fprintf('Is solution in collision: %d \n', in_collision);
+if (~in_collision)
+    fprintf('Length of solution: %f\n', traj_length(final_path));
+end

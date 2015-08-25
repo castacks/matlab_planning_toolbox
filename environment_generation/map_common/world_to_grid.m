@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function [ r, c ] = world_to_grid( x_world, y_world, map )
 %WORLD_TO_GRID Convert a 
 %   Detailed explanation goes here

@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function cost_traj = cost_fn_map_value_traj( p_start, p_end, map )
 %COST_FN_MAP_VALUE_TRAJ Summary of this function goes here
 %   Detailed explanation goes here

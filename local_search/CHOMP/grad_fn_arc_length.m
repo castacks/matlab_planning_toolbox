@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function grad = grad_fn_arc_length( xi, c_fn, grad_c_fn, p_start)
 %GRAD_FN_ARC_LENGTH Summary of this function goes here
 %   Detailed explanation goes here

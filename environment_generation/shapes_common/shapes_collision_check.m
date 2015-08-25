@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function in_collision = shapes_collision_check( start, stop, shape_array )
 %SHAPES_COLLISION_CHECK Summary of this function goes here
 %   Detailed explanation goes here

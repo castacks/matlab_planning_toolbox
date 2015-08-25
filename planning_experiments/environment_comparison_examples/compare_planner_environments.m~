@@ -1,0 +1,47 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
+clc;
+clear;
+close all;
+
+%% Make a list of environment names
+env_names = {'env01', 'env02', 'env03'};
+
+%% Make a list of planner configurations
+planner_config_names = {'weighted_astar_config'};
+
+%% Set experiment configurations
+visualize = 1; %do we want to visualize?
+plan_time = 10.0; %how much planning time (sec) do we want to give?
+bbox = [-1 -1; 1 1];
+start = [0 0];
+goal = [1 0];
+
+%% Run experiments
+for env_idx = 1:length(env_names)
+    env = env_names{env_idx};
+    load(strcat('../../saved_environments/',env,'.mat'));
+    
+    for planner_config_idx = 1:length(planner_config_names)
+        planner_config = planner_config_names{planner_config_idx};
+        planner_config_fn = str2func(planner_config);
+        
+        planner = planner_config_fn (start, goal, map, cost_map, bbox, plan_time, visualize);
+        
+        % Execute planner on environment
+        [final_path] = planner();
+        
+        % Check path
+        in_collision = cost_fn_map_coll_dense(final_path, map);
+        fprintf('Result for env: %s planner:  \n', in_collision);
+        fprintf('Is solution in collision: %d \n', in_collision);
+        if (~in_collision)
+            fprintf('Length of solution: %f\n', traj_length(final_path));
+        end
+    end
+end

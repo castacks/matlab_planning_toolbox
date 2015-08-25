@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function visualize_value( map, clim, cmap )
 %VISUALIZE_VALUE Summary of this function goes here
 %   Detailed explanation goes here

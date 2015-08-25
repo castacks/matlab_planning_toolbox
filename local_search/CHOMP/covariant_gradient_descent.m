@@ -1,4 +1,11 @@
-function [ cost_traversal, time_taken, cost_history, traj_history ] = covariant_gradient_descent( xi, cost_fn, grad_fn, options )
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
+function [ final_path, chomp_cost] = covariant_gradient_descent( xi, cost_fn, grad_fn, options )
 %COVARIANT_GRADIENT_DESCENT Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -27,7 +34,6 @@ traj.grad = grad_fn(xi, xi_der);
 traj_history = [traj_history; traj];
 cost_history = [cost_history; cost_fn(xi, xi_der)];
 
-tic
 for i = 1:max_iter
     grad = traj.grad;
     if (options.decrease_wt == 1)
@@ -56,8 +62,13 @@ for i = 1:max_iter
         end
     end
 end
-time_taken = toc;
-cost_traversal = cost_history(end);
+
+if (options.visualize)
+    plot_traj_history(traj_history);
+end
+
+final_path = traj_history(end);
+
 
 % if (nargout > 4)
 %     figure(1);

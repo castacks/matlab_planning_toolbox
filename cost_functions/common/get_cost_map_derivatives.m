@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function [ cost_map_x, cost_map_y, cost_map_xx, cost_map_yy, cost_map_xy ] = get_cost_map_derivatives( cost_map )
 %GET_COST_MAP_DERIVATIVES Summary of this function goes here
 %   Detailed explanation goes here

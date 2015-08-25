@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 %*******************************************************************************
 % function:	p_poly_dist
 % Description:	distance from point to polygon whose vertices are specified by the

@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function hh = herrorbar(x, y, l, u, symbol)
 %HERRORBAR Horizontal Error bar plot.
 %   HERRORBAR(X,Y,L,R) plots the graph of vector X vs. vector Y with

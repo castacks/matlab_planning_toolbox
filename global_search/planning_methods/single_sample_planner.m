@@ -1,4 +1,11 @@
-function [final_cost, final_path, log_data] = single_sample_planner( start, goal, options )
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
+function [final_path, final_cost, log_data] = single_sample_planner( start, goal, options )
 %BITSTAR Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -69,7 +76,7 @@ while(toc(timerval) < max_time && iter < max_iter)
         'VariableNames', {'time', 'iter', 'num_samples', 'num_vertices', 'num_collcheck', 'num_optimcalls', 'goal_cost'})];
     end
     
-            
+    Xsamp = vertex_set();      
     new_sample = sampler(g_t(S.get_element(goal_id)));
     new_sample.idx = S.get_next_idx();
     new_sample.parent_idx = 0;
@@ -90,6 +97,9 @@ end
 
 final_cost = S.get_element(goal_id).cost_from_start;
 final_path = global_search_path( S, goal_id );
+if (~isempty(final_path))
+    final_path(:,3) = [];
+end
 
 function add_incoming_edges_to_queue(x_id)
     x = S.get_element(x_id);

@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function [ map ] = get_blank_map()
 %GET_BLANK_MAP Defines a simple map structure but it contains nothing
 %   map is a struct with the following fields
