@@ -1,3 +1,10 @@
+%% 
+% Copyright (c) 2015 Carnegie Mellon University, Sanjiban Choudhury <sanjibac@andrew.cmu.edu>
+%
+% For License information please see the LICENSE file in the root directory.
+%
+%%
+
 function V = spheresegmentvolume(t,n,radius)
 % spheresegmentvolume: n-d volume of a sphere cap or within any band defined by parallel planes
 % usage: V = spheresegmentvolume(t,n,radius)
