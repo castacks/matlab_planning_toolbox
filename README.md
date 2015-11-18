@@ -15,7 +15,8 @@ Navigate to planning_experiments/detailed_examples. Try out the different planne
 Copyright by Sanjiban Choudhury (sanjiban@cmu.edu)
 
 ### License ###
-
+[This software is BSD licensed.](http://opensource.org/licenses/BSD-3-Clause)
+ 
 Copyright (c) 2015, Carnegie Mellon University
 All rights reserved.
 
