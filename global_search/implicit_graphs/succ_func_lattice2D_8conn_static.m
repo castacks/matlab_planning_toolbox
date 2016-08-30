@@ -13,7 +13,7 @@ r = 1.5*(bbox(2,1) - bbox(1,1))/res; %hack!
 
 V_list = S.get_element(V.get_idx());
 if (~isempty(V_list))
-    Vsucc = V_list(pdist2(cell2mat({V_list.state}'), query.state) - r <= 0); 
+    Vsucc = V_list(pdist2r(cell2mat({V_list.state}'), query.state) - r <= 0); 
 else
     Vsucc = [];
 end

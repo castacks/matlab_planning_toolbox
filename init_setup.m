@@ -9,6 +9,11 @@ old_folder = cd('environment_generation');
 run init_setup;
 cd(old_folder);
 
+old_folder = cd('utilities');
+run init_setup;
+cd(old_folder);
+
+
 old_folder = cd('cost_functions');
 run init_setup;
 cd(old_folder);
@@ -24,6 +29,7 @@ cd(old_folder);
 old_folder = cd('planning_common');
 run init_setup;
 cd(old_folder);
+
 
 clc;
 clear;

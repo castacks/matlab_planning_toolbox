@@ -23,7 +23,7 @@ options.c = @(v1, v2) cost_fn_map_coll_traj(v1.state, v2.state, map, inf);
 
 %% Setup heuristic
 heuristic_inflation = 10;
-options.h_hat = @(v) heuristic_inflation*pdist2(cell2mat({v.state}'), goal);
+options.h_hat = @(v) heuristic_inflation*pdist2r(cell2mat({v.state}'), goal);
 
 %% Setup Implicit Graph
 resolution = 40;

@@ -14,7 +14,7 @@ function Vsucc = succ_func_rdisk( query, V, S, total_size, eta, start, goal, bbo
     
     V_list = S.get_element(V.get_idx());
     if (~isempty(V_list))
-        dist = pdist2(cell2mat({V_list.state}'), query.state);
+        dist = pdist2r(cell2mat({V_list.state}'), query.state);
         Vsucc = V_list(dist - r <= 0); % Line 2
         if (isempty(Vsucc))
             [~, min_idx] = min(dist);
