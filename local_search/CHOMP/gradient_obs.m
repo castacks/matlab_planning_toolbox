@@ -14,7 +14,7 @@ delta_c = [cost_fn_map_value_wp( xi, cost_map_x ) cost_fn_map_value_wp( xi, cost
 
 n = size(xi,1) + 1;
 xi_d = n*diff([p_start; xi]);
-xi_d_norm = normr(xi_d);
+xi_d_norm = normr2(xi_d);
 
 xi_dd = n*([0 0; diff(xi_d)]);
 

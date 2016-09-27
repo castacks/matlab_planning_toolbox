@@ -14,7 +14,7 @@ xi_d = n*diff([p_start; xi]);
 c = c_fn( xi, xi_d);
 delta_c = grad_c_fn(xi, xi_d);
 
-xi_d_norm = normr(xi_d);
+xi_d_norm = normr2(xi_d);
 
 xi_dd = n*([zeros(1,d); diff(xi_d)]);
 
