@@ -1,3 +1,7 @@
+# Tutorial Presentation #
+
+[Please review the tutorial presentation here](doc/lecture-slides.pdf)
+
 # README #
 
 This is a matlab toolbox for understanding different global and local search algorithms. Please see [wiki](https://bitbucket.org/castacks/matlab_planning_toolbox/wiki/Home).
